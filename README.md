@@ -14,13 +14,3 @@ Each folder contains categorized problems such as **Arrays**, **Searching**, **S
 - Maintain consistency through daily coding practice  
 
 ---
-
-## 📂 Repository Structure
-DSA-by-Amruta/
-┣ Arrays/
-┣ Searching/
-┣ Sorting/
-┣ Strings/
-┣ LinkedList/
-┗ README.md
-
