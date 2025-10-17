@@ -16,3 +16,11 @@ Each folder contains categorized problems such as **Arrays**, **Searching**, **S
 ---
 
 ## 📂 Repository Structure
+DSA-by-Amruta/
+┣ Arrays/
+┣ Searching/
+┣ Sorting/
+┣ Strings/
+┣ LinkedList/
+┗ README.md
+
