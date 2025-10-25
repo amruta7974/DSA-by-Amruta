@@ -1,3 +1,5 @@
+package Arrays;
+
 // File: Arrays/TwoSum.java
 // Purpose: Solve the "Two Sum" problem using brute-force approach
 // Topic: Arrays
