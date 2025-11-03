@@ -1,51 +1,75 @@
 package Arrays;
 
-// File: Arrays/TwoSum.java
-// Purpose: Solve the "Two Sum" problem using brute-force approach
-// Topic: Arrays
-// Difficulty: Easy
 
-// Class to solve the Two Sum problem
+/*
+ * 🧩 Category: Arrays | Technique: Brute Force
+ * 🧠 Problem: Two Sum
+ * 🔗 LeetCode: https://leetcode.com/problems/two-sum/
+ *
+ * 🎯 Goal:
+ * Given an array of integers `nums` and an integer `target`,
+ * return the indices of the two numbers such that they add up to the target.
+ * 
+ * You may assume that each input has exactly one solution,
+ * and you may not use the same element twice.
+ *
+ * ✅ Example:
+ * Input:  nums = [2, 7, 11, 15], target = 9
+ * Output: [0, 1]
+ * 
+ * Explanation:
+ * nums[0] + nums[1] = 2 + 7 = 9 → indices [0, 1]
+ *
+ * 💡 Approach:
+ * 1. Use a brute-force approach: check all pairs of numbers.
+ * 2. For each element, iterate through all elements after it.
+ * 3. If a pair sums to the target, return their indices.
+ *
+ * 🕒 Time Complexity: O(n²)
+ * 🧩 Space Complexity: O(1)
+ */
+
+
 public class TwoSum {
 
     /**
-     * Method to find indices of two numbers in an array that add up to the target
+     * Finds indices of two numbers that add up to the given target.
      *
      * @param nums   input array of integers
-     * @param target the sum we are looking for
-     * @return an array of two indices whose elements sum up to the target
+     * @param target target sum
+     * @return array of two indices whose elements sum up to the target
      */
     public int[] twoSum(int[] nums, int target) {
-        // Outer loop: iterate through each element in the array
+        // Iterate through each element in the array
         for (int i = 0; i < nums.length; i++) {
-            // Inner loop: check every element after the current one
+            // For each element, check all elements that come after it
             for (int j = i + 1; j < nums.length; j++) {
-                // If the sum of two elements equals the target
+                // If the sum equals the target, return the indices
                 if (nums[i] + nums[j] == target) {
-                    // Return their indices as an array
                     return new int[]{i, j};
                 }
             }
         }
-        // If no solution exists, throw an exception
-        throw new IllegalArgumentException("No two sum solution");
+
+        // If no valid pair is found
+        throw new IllegalArgumentException("No two sum solution exists for the given input.");
     }
 
     /**
-     * Main method to run and test the Two Sum solution
+     * Optional main() method for local testing in VS Code
      */
     public static void main(String[] args) {
-        // Create an object of the TwoSum class
         TwoSum ts = new TwoSum();
 
-        // Sample input array
+        // Example input
         int[] nums = {2, 7, 11, 15};
         int target = 9;
 
-        // Call the twoSum method
+        // Get the result
         int[] result = ts.twoSum(nums, target);
 
-        // Print the indices of the elements that sum up to target
-        System.out.println("Indices: " + result[0] + ", " + result[1]);
+        // Display the output
+        System.out.println("Input: [2, 7, 11, 15], Target: 9");
+        System.out.println("Output Indices: [" + result[0] + ", " + result[1] + "]");
     }
 }
